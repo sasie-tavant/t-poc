@@ -20,7 +20,7 @@ gem 'devise'
 
 gem 'carrierwave'
 
-gem 'rmagick'
+gem "rmagick", :require => 'RMagick'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
