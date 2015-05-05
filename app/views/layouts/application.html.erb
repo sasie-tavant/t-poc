@@ -36,18 +36,17 @@
   </div>
 </div>
 
-<% if user_signed_in? %>
-  <div class="center">
-    <div class="main-nav" style="clear: both;">
-      <ul>
-        <li class="active"><a href="/">Central</a></li>
-        <li class="last"><a href="#">My-account</a></li>
-      </ul>
-    </div>
-  </div>
-<% end %>
-
 <div class="center">
+  <p id="notice"><%= notice %></p>
+  <% if user_signed_in? %>
+      <!--<div class="main-nav" style="clear: both;">-->
+        <!--<ul>-->
+          <!--<li class="active"><a href="/">Central</a></li>-->
+          <!--<li class="last"><a href="#">My-account</a></li>-->
+        <!--</ul>-->
+      <!--</div>-->
+  <% end %>
+
   <%= yield %>
 </div>
 

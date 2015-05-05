@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  constructor: MyString
+  podiums: MyString
+  driver1: MyString
+  driver2: MyString
+  titles: 1
+  livery: MyString
+
+two:
+  name: MyString
+  constructor: MyString
+  podiums: MyString
+  driver1: MyString
+  driver2: MyString
+  titles: 1
+  livery: MyString

@@ -1,0 +1,50 @@
+<style>
+    p {
+        margin: 0 0 10px;
+        line-height: 30px;
+    }
+</style>
+<h1>Team Details</h1>
+
+<br/>
+
+<p>
+  <span style="width: 100px;"><strong>Name:</strong></span>
+  <%= @team.name.titleize %>
+</p>
+
+<p>
+  <strong>Constructor:</strong>
+  <%= @team.constructor.titleize %>
+</p>
+
+<p>
+  <strong>Podiums:</strong>
+  <%= @team.podiums.titleize %>
+</p>
+
+<p>
+  <strong>Driver1:</strong>
+  <%= @team.driver1.titleize %>
+</p>
+
+<p>
+  <strong>Driver2:</strong>
+  <%= @team.driver2.titleize %>
+</p>
+
+<p>
+  <strong>Titles:</strong>
+  <%= @team.titles %>
+</p>
+
+<p>
+  <strong>Livery</strong>
+  <br/>
+  <%= image_tag @team.livery_url(:large) %>
+</p>
+
+<br/>
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>
