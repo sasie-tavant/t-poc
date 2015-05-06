@@ -70,11 +70,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings   = {
-      address: 'smtp.office365.com',
+      address: 'smtp.mandrillapp.com',
       port: 587,
       domain: 'tavant.com',
       user_name: 'sasindran.p@tavant.com',
-      password: 'Sasie123',
+      password: 'uNFA6SUmBB2aqlqCCAz4eg',
       authentication: 'plain' }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
