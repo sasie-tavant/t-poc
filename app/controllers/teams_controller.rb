@@ -5,7 +5,7 @@ class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
   def index
-    @teams = Team.all
+    @teams = Team.all#.paginate(:page => params[:page], per_page: 20)
   end
 
   def show
@@ -19,7 +19,7 @@ class TeamsController < ApplicationController
   end
 
   def create
-    @team = Team.new(team_params)
+    @team = Team.new(team_params.merge(user_id: current_user.id))
 
     respond_to do |format|
       if @team.save
@@ -54,7 +54,7 @@ class TeamsController < ApplicationController
 
   private
     def set_team
-      @team = Team.find(params[:id])
+      @team = current_user.teams.find(params[:id])
     end
 
     def team_params
