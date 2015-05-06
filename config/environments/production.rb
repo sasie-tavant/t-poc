@@ -64,6 +64,19 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.perform_deliveries   = true
+  config.action_mailer.default_url_options  = { host: 'tavant.com' }
+  config.action_mailer.default_options      = { from: 'Tavant LOL-POC<no-reply@tavant.com>' }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings   = {
+      address: 'smtp.office365.com',
+      port: 995,
+      domain: 'tavant.com',
+      user_name: 'sasindran.p@tavant.com',
+      password: 'Sasie123',
+      authentication: 'plain' }
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
