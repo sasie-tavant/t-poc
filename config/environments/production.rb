@@ -65,14 +65,14 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_deliveries   = true
-  config.action_mailer.default_url_options  = { host: 'tavant.com' }
-  config.action_mailer.default_options      = { from: 'Tavant LOL-POC<no-reply@tavant.com>' }
+  config.action_mailer.default_url_options  = { host: 'vast-anchorage-8226.herokuapp.com' }
+  config.action_mailer.default_options      = { from: 'Tavant LOL-POC<no-reply@vast-anchorage-8226.herokuapp.com>' }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings   = {
       address: 'smtp.mandrillapp.com',
       port: 587,
-      domain: 'tavant.com',
+      domain: 'vast-anchorage-8226.herokuapp.com',
       user_name: 'sasindran.p@tavant.com',
       password: 'uNFA6SUmBB2aqlqCCAz4eg',
       authentication: 'plain' }
