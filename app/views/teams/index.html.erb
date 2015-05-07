@@ -1,5 +1,19 @@
 <h1>Teams</h1>
 
+<div class="booking-status">
+  <%= form_tag(teams_path, method: :get) do %>
+      <div class="fm-elements last">
+        <div class="filter" style="padding-bottom: 10px; float: right;">
+          <label>Search</label>
+          <%= text_field_tag :search, params[:search], onchange: 'this.form.submit();' %>
+        </div>
+        <!--<div class="by-status">-->
+        <!--<input type="button" value="Search" class="go">-->
+        <!--</div>-->
+      </div>
+  <% end %>
+</div>
+
 <table class="table table-striped table-responsive">
   <thead>
   <tr>

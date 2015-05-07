@@ -9,4 +9,22 @@ class Team < ActiveRecord::Base
 
   belongs_to :user
 
+  #### instance methods ####
+
+
+  #### class methods ####
+
+  class << self
+
+    def search(search_with, _user = nil)
+      search_with = "%#{search_with}%"
+      if _user.nil?
+        Team.where("constructor LIKE :search OR driver1 LIKE :search OR driver2 LIKE :search OR name LIKE :search", search: search_with)
+      else
+      _user.teams.where("constructor LIKE :search OR driver1 LIKE :search OR driver2 LIKE :search OR name LIKE :search", search: search_with)
+      end
+    end
+
+  end
+
 end

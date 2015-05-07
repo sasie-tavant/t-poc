@@ -1,4 +1,53 @@
 <h2>Welcome!</h2>
 <p>
-  Check out the showcase. <%= Time.now %>
+  Here are list of teams registered for the 2015 Grand Prix.
 </p>
+
+<div class="booking-status">
+  <%= form_tag('/', method: :get) do %>
+      <div class="fm-elements last">
+        <div class="filter" style="padding-bottom: 10px; float: right;">
+          <label>Search</label>
+          <%= text_field_tag :search, params[:search], onchange: 'this.form.submit();' %>
+        </div>
+        <!--<div class="by-status">-->
+        <!--<input type="button" value="Search" class="go">-->
+        <!--</div>-->
+      </div>
+  <% end %>
+</div>
+
+<table class="table table-striped table-responsive">
+  <thead>
+  <tr>
+    <th>Livery</th>
+    <th>Name</th>
+    <th>Constructor</th>
+    <th>Podiums</th>
+    <th>Driver1</th>
+    <th>Driver2</th>
+    <th>Titles</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% if @teams.empty? %>
+      <tr>
+        <td colspan="9">There's no records to display, to create a new team click the link below!</td>
+      </tr>
+  <% else %>
+      <% @teams.each do |team| %>
+          <tr>
+            <td><%= image_tag(team.livery_url(:small)) %></td>
+            <td><%= link_to team.name.titleize, team_show_path(team) %></td>
+            <td><%= team.constructor %></td>
+            <td><%= team.podiums %></td>
+            <td><%= team.driver1 %></td>
+            <td><%= team.driver2 %></td>
+            <td><%= team.titles %></td>
+          </tr>
+      <% end %>
+  <% end %>
+  </tbody>
+</table>
+<%= will_paginate @teams %>

@@ -5,7 +5,11 @@ class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
   def index
-    @teams = current_user.teams.paginate(:page => params[:page], per_page: 10)
+    if params[:search].present?
+      @teams = Team.search(params[:search], current_user).paginate(:page => params[:page], per_page: 10)
+    else
+      @teams = current_user.teams.paginate(:page => params[:page], per_page: 10)
+    end
   end
 
   def show
