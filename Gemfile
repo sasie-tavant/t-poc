@@ -24,7 +24,7 @@ gem "rmagick", :require => 'RMagick'
 
 gem "will_paginate"
 
-gem 'rails_serve_static_assets'
+gem 'rails_12factor', group: :production
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
