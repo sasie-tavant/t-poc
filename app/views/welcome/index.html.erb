@@ -40,10 +40,10 @@
           <tr>
             <td><%= image_tag(team.livery_url(:small)) %></td>
             <td><%= link_to team.name.titleize, team_show_path(team) %></td>
-            <td><%= team.constructor %></td>
+            <td><%= team.constructor.titleize %></td>
             <td><%= team.podiums %></td>
-            <td><%= team.driver1 %></td>
-            <td><%= team.driver2 %></td>
+            <td><%= team.driver1.titleize %></td>
+            <td><%= team.driver2.titleize %></td>
             <td><%= team.titles %></td>
           </tr>
       <% end %>

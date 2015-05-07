@@ -8,41 +8,17 @@
 
 <br/>
 
-<p>
-  <span style="width: 100px;"><strong>Name:</strong></span>
-  <%= @team.name.titleize %>
-</p>
-
-<p>
-  <strong>Constructor:</strong>
-  <%= @team.constructor.titleize %>
-</p>
-
-<p>
-  <strong>Podiums:</strong>
-  <%= @team.podiums.titleize %>
-</p>
-
-<p>
-  <strong>Driver1:</strong>
-  <%= @team.driver1.titleize %>
-</p>
-
-<p>
-  <strong>Driver2:</strong>
-  <%= @team.driver2.titleize %>
-</p>
-
-<p>
-  <strong>Titles:</strong>
-  <%= @team.titles %>
-</p>
-
-<p>
-  <strong>Livery</strong>
-  <br/>
-  <%= image_tag @team.livery_url(:large) %>
-</p>
+<table class="table">
+  <tr>
+    <th rowspan="6" width="40%"><%= image_tag @team.livery_url(:original) %></th>
+    <td><strong>Constructor</strong></td> <td><%= @team.constructor.titleize %></td>
+  </tr>
+  <tr><td><strong>Name</strong></td> <td><%= @team.name.titleize %></td></tr>
+  <tr><td><strong>Podiums</strong></td> <td><%= @team.podiums.titleize %></td></tr>
+  <tr><td><strong>Driver1</strong></td> <td><%= @team.driver1.titleize %></td></tr>
+  <tr><td><strong>Driver2</strong></td> <td><%= @team.driver2.titleize %></td></tr>
+  <tr><td><strong>Titles</strong></td> <td><%= @team.titles %></td></tr>
+</table>
 
 <br/>
 
