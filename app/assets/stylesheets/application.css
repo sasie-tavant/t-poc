@@ -2509,7 +2509,7 @@ html, body {
     overflow:hidden;
     position:relative;
 }
-.login-form { width:333px; float:right; padding:20px 20px 0; background:#fff; border:5px solid #b99e07; overflow:hidden; right:40px; top:15%; position:absolute;}
+.login-form { width:333px; float:right; padding:20px 20px 0; background:#fff; border:5px solid #b99e07; overflow:hidden; top:15%; position:absolute;}
 .login-form h4 { font-size:22px; font-weight:bold; text-align:center; margin-bottom:5px; color:#5a5a5a;}
 .login-form h5 { font-size:14px; text-align:center;}
 .login-form form { margin:20px 0 0 0;}
@@ -2551,4 +2551,8 @@ p#notice {
     text-align: center;
     margin: 10px 0 0 10px;
     background: #ccffcc;
+}
+
+div.field, div.actions {
+    margin-bottom: 10px;
 }

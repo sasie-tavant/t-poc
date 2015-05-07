@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150506124031) do
+ActiveRecord::Schema.define(version: 20150507065507) do
 
   create_table "teams", force: :cascade do |t|
     t.string   "name",        limit: 255
     t.string   "constructor", limit: 255
-    t.string   "podiums",     limit: 255
+    t.integer  "podiums",     limit: 4
     t.string   "driver1",     limit: 255
     t.string   "driver2",     limit: 255
     t.integer  "titles",      limit: 4

@@ -4,7 +4,8 @@ class Team < ActiveRecord::Base
 
   validates :constructor, { uniqueness: true, presence: true }
   validates :driver1, :driver2,  { uniqueness: true, presence: true }
-  validates :livery, presence: true
+  validates :livery, :podiums, presence: true
+  validates :podiums, numericality:{ only_integer: true }
   validates :titles, { presence: true, numericality: { greater_than_or_equal_to: 0 } }
 
   belongs_to :user

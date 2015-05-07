@@ -1,6 +1,6 @@
 <%= form_for(@team, html: {class: 'form-horizontal'}) do |f| %>
   <% if @team.errors.any? %>
-    <div id="error_explanation" class="alert-error">
+    <div id="error_explanation" class="alert-error" style="margin-bottom: 5px;padding: 3px 3px 3px 3px;">
       <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
 
       <ul>
@@ -12,31 +12,31 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :constructor %><br>
+    <%= f.label :constructor %>
     <%= f.text_field :constructor %>
   </div>
   <div class="field">
-    <%= f.label :podiums %><br>
+    <%= f.label :podiums %>
     <%= f.text_field :podiums %>
   </div>
   <div class="field">
-    <%= f.label :driver1 %><br>
+    <%= f.label :driver1 %>
     <%= f.text_field :driver1 %>
   </div>
   <div class="field">
-    <%= f.label :driver2 %><br>
+    <%= f.label :driver2 %>
     <%= f.text_field :driver2 %>
   </div>
   <div class="field">
-    <%= f.label :titles %><br>
+    <%= f.label :titles %>
     <%= f.number_field :titles %>
   </div>
   <div class="field">
-    <%= f.label :livery %><br>
+    <%= f.label :livery %>
     <%= f.file_field :livery, class: 'img-upload' %>
   </div>
     <br/>
